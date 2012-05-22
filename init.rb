@@ -1,7 +1,7 @@
 require 'rubygems'
 require 'spire_io'
 
-appName = "Demo App"
+app_name = "Demo App"
 
 puts "Account Secret: "
 secret = gets.chomp
@@ -9,6 +9,6 @@ secret = gets.chomp
 spire = Spire.new()
 spire.start(secret)
 
-app = spire.find_or_create_application(appName)
+app = spire.find_or_create_application(app_name)
 puts "App has been created!"
 puts "App key: #{app.key}"
