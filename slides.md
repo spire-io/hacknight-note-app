@@ -82,4 +82,12 @@ https://github.com/spire-io/hacknight-note-app
 
 # The Code.
 
+- - -
+
+# Next Steps
+
+- Messaging
+- Default Profile
+- Capabilities
+
 
