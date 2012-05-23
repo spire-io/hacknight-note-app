@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Demo of Serverless App</title>
+    <script src="http://code.jquery.com/jquery.min.js"></script>
+
+    <script src="spire.io.bundle.js"></script>
+    <script src="app.js"></script>
+</head>
+
+<body>
+ <form action="#" id="authenticationForm" method="post">
+    <div class="input-wrapper">
+      <label for="login">Login</label>
+      <input type="text"
+        id="login"
+        placeholder="" />
+
+      <div class="clear"><!-- --></div>
+    </div>
+
+    <div class="input-wrapper">
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" />
+
+      <div class="clear"><!-- --></div>
+    </div>
+
+    <input type="submit"
+      id="loginButton"
+      value="Login" />
+
+    <input type="submit"
+      id="joinButton"
+      value="Join" />
+
+    <div class="clear"><!-- --></div>
+  </form>
+
+  <div id="noteBox" style="display:none">
+    <h2>Your Notes: </h2>
+    <ul id="noteList"></ul>
+
+    <div id="newNote">
+      <form action="#" id="newNoteForm" method="post">
+        <div class="input-wrapper">
+          <label for="newNoteInput">New Note:</label>
+          <input type="text"
+            id="newNoteInput"
+            placeholder="" />
+
+        <input type="submit"
+          id="createNoteButton"
+          value="Create" />
+
+        <div class="clear"><!-- --></div>
+      </form>
+    </div>
+
+    <a href="#" id="logoutButton">Logout</a>
+  </div>
+
+</body>
+
+</html>
