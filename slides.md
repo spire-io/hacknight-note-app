@@ -1,5 +1,6 @@
 # Creating Serverless Apps with Spire.io
 
+
 Nicolas LaCasse
 
 LA Hack Night
@@ -54,12 +55,13 @@ May 23, 2012
 
 https://github.com/spire-io/hacknight-note-app
 
-
 http://iriecycle.net/hacknight/
+
 
   - Register a new user
   - Log in existing users
   - Store notes in each user's profile
+  
 
 - - -
 
@@ -74,5 +76,10 @@ https://github.com/spire-io/hacknight-note-app
     Node.JS: npm install spire.io.js; node init.js<br>
     Ruby: gem install spire_io; ruby init.rb
 
+- - -
+
+https://github.com/spire-io/hacknight-note-app
+
+# The Code.
 
 
