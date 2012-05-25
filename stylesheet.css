@@ -4,6 +4,7 @@ body {
   color: #493E2A;
   text-shadow: 0px -1px 1px white;
   line-height: 1.5;
+  min-width: 600px;
 }
 
 h2 {
@@ -13,6 +14,7 @@ h2 {
 
 h2 span {
   font-size: .75em;
+  color: #878072;
 }
 
 .welcome {
@@ -33,11 +35,6 @@ form, #yourNotes {
   border-radius: 5px;
   padding: 2em;
   background: url(images/clean_textile.png);
-}
-
-#noteBox {
-  width: 400px;
-  margin: 0 auto;
 }
 
 #yourNotes li {
@@ -73,7 +70,7 @@ input[type=text], input[type=password] {
   margin-bottom: 1em;
 }
 
-input[type=submit] {
+input[type=submit], #createNoteButton {
   font-size: 1em;
   background-color: #e5b485;
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgb(229, 180, 133)), to(rgb(158, 95, 67)));
@@ -95,13 +92,13 @@ input[type=submit] {
   padding: 7px 0 8px 0;
   text-decoration: none;
   text-align: center;
-  text-shadow: 0 -1px 1px #000000;
+  text-shadow: 0 -1px 2px #000000;
   width: 100px;
   margin-top: .5em;
   margin-right: 1em;
 }
 
-input[type=submit]:hover {
+input[type=submit]:hover, #createNoteButton:hover {
   background-color: #ffc595;
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgb(255, 197, 149)), to(rgb(213, 128, 95)));
   background-image: -webkit-linear-gradient(top, rgb(255, 197, 149), rgb(213, 128, 95));
@@ -112,7 +109,7 @@ input[type=submit]:hover {
   filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#ffc595', EndColorStr='#d5805f');  
 }
 
-input[type=submit]:active {
+input[type=submit]:active, #createNoteButton:active {
   background-color: #cf7e5e;
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgb(207, 126, 94)), to(rgb(222, 169, 127)));
   background-image: -webkit-linear-gradient(top, rgb(207, 126, 94), rgb(222, 169, 127));
@@ -128,45 +125,45 @@ input[type=submit]:active {
   -moz-box-shadow: inset 0px 0px 5px #686A6E;
 }
 
-
-#joinButton, #createNoteButton {
+#joinButton {
   border: 1px solid #2C7D6A;
   border-bottom: 1px solid #442418;
   -webkit-box-shadow: inset 0 1px 0 0 #A9FFB1;
   -moz-box-shadow: inset 0 1px 0 0 #A9FFB1;
-  background-color: #87e6a8;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgb(135, 230, 168)), to(rgb(85, 189, 168)));
-  background-image: -webkit-linear-gradient(top, rgb(135, 230, 168), rgb(85, 189, 168));
-  background-image: -moz-linear-gradient(top, rgb(135, 230, 168), rgb(85, 189, 168));
-  background-image: -o-linear-gradient(top, rgb(135, 230, 168), rgb(85, 189, 168));
-  background-image: -ms-linear-gradient(top, rgb(135, 230, 168), rgb(85, 189, 168));
-  background-image: linear-gradient(top, rgb(135, 230, 168), rgb(85, 189, 168));
-  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#87e6a8', EndColorStr='#55bda8');
+  background-color: #7ad69f;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgb(122, 214, 159)), to(rgb(80, 176, 154)));
+  background-image: -webkit-linear-gradient(top, rgb(122, 214, 159), rgb(80, 176, 154));
+  background-image: -moz-linear-gradient(top, rgb(122, 214, 159), rgb(80, 176, 154));
+  background-image: -o-linear-gradient(top, rgb(122, 214, 159), rgb(80, 176, 154));
+  background-image: -ms-linear-gradient(top, rgb(122, 214, 159), rgb(80, 176, 154));
+  background-image: linear-gradient(top, rgb(122, 214, 159), rgb(80, 176, 154));
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#7ad69f', EndColorStr='#50b09a');
 }
 
-#joinButton:hover, #createNoteButton:hover {
-  background-color: #89fbbf;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgb(137, 251, 191)), to(rgb(91, 225, 201)));
-  background-image: -webkit-linear-gradient(top, rgb(137, 251, 191), rgb(91, 225, 201));
-  background-image: -moz-linear-gradient(top, rgb(137, 251, 191), rgb(91, 225, 201));
-  background-image: -o-linear-gradient(top, rgb(137, 251, 191), rgb(91, 225, 201));
-  background-image: -ms-linear-gradient(top, rgb(137, 251, 191), rgb(91, 225, 201));
-  background-image: linear-gradient(top, rgb(137, 251, 191), rgb(91, 225, 201));
-  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#89fbbf', EndColorStr='#5be1c9');  
+#joinButton:hover {
+  background-color: #84ebb0;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgb(132, 235, 176)), to(rgb(92, 202, 179)));
+  background-image: -webkit-linear-gradient(top, rgb(132, 235, 176), rgb(92, 202, 179));
+  background-image: -moz-linear-gradient(top, rgb(132, 235, 176), rgb(92, 202, 179));
+  background-image: -o-linear-gradient(top, rgb(132, 235, 176), rgb(92, 202, 179));
+  background-image: -ms-linear-gradient(top, rgb(132, 235, 176), rgb(92, 202, 179));
+  background-image: linear-gradient(top, rgb(132, 235, 176), rgb(92, 202, 179));
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#84ebb0', EndColorStr='#5ccab3');
 }
 
-#joinButton:active, #createNoteButton:active {
-  background-color: #5fdec1;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgb(95, 222, 193)), to(rgb(125, 229, 173)));
-  background-image: -webkit-linear-gradient(top, rgb(95, 222, 193), rgb(125, 229, 173));
-  background-image: -moz-linear-gradient(top, rgb(95, 222, 193), rgb(125, 229, 173));
-  background-image: -o-linear-gradient(top, rgb(95, 222, 193), rgb(125, 229, 173));
-  background-image: -ms-linear-gradient(top, rgb(95, 222, 193), rgb(125, 229, 173));
-  background-image: linear-gradient(top, rgb(95, 222, 193), rgb(125, 229, 173));
-  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#5fdec1', EndColorStr='#7de5ad');
+#joinButton:active {
+  background-color: #54b9a1;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgb(84, 185, 161)), to(rgb(119, 211, 159)));
+  background-image: -webkit-linear-gradient(top, rgb(84, 185, 161), rgb(119, 211, 159));
+  background-image: -moz-linear-gradient(top, rgb(84, 185, 161), rgb(119, 211, 159));
+  background-image: -o-linear-gradient(top, rgb(84, 185, 161), rgb(119, 211, 159));
+  background-image: -ms-linear-gradient(top, rgb(84, 185, 161), rgb(119, 211, 159));
+  background-image: linear-gradient(top, rgb(84, 185, 161), rgb(119, 211, 159));
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#54b9a1', EndColorStr='#77d39f');
   box-shadow: inset 0px 0px 5px #686A6E;
   -webkit-box-shadow: inset 0px 0px 5px #686A6E;
-  -moz-box-shadow: inset 0px 0px 5px #686A6E;}
+  -moz-box-shadow: inset 0px 0px 5px #686A6E;
+}
 
 #createNoteButton {
   font-size: 16px;
@@ -178,4 +175,12 @@ input[type=submit]:active {
 
 #logoutButton:hover {
   color: #c40043;
+}
+
+footer {
+  width: 464px;
+  margin: 0 auto;
+  margin-bottom: 1em;
+  text-align: center;
+  font-size: 1.5em;
 }
