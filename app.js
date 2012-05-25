@@ -74,9 +74,17 @@ $('document').ready(function () {
   loginButton.click(function (e) {
     e.preventDefault();
 
+    var login = loginInput.val();
+    var password = passwordInput.val();
+
+    if (!login.length || !password.length) {
+      alert("Please enter a valid login and password.");
+      return;
+    }
+
     spire.getApplication(APP_KEY, function (err, app) {
       if (err) return console.error(err);
-      app.authenticateMember(loginInput.val(), passwordInput.val(), function (err, member) {
+      app.authenticateMember(login, password, function (err, member) {
         if (err) return alert("Unauthorized!");
         console.log('Authentication Successful');
 
@@ -91,10 +99,18 @@ $('document').ready(function () {
   joinButton.click(function (e) {
     e.preventDefault();
 
+    var login = loginInput.val();
+    var password = passwordInput.val();
+
+    if (!login.length || !password.length) {
+      alert("Please enter a valid login and password.");
+      return;
+    }
+
     spire.getApplication(APP_KEY, function (err, app) {
       if (err) return console.error(err);
 
-      app.createMember(loginInput.val(), passwordInput.val(), function (err, member) {
+      app.createMember(login, password, function (err, member) {
         if (err && err.status === 409) return alert("User already exists!")
         if (err) return alert("Problem creating user!");
         console.log('Registration Successful');
