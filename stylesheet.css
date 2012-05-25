@@ -45,6 +45,20 @@ form, #yourNotes {
   border-bottom: 1px dashed #5d71a2;
 }
 
+.delete {
+  float: right;
+  background: url(images/delete.png);
+  width: 27px;
+  height: 26px;
+  opacity: .15;
+  margin-right: -2em;
+  margin-top: .2em;
+}
+
+.delete:hover{
+  opacity: 1;
+}
+
 .input-wrapper {
   font-size: 2em;
 }
@@ -178,6 +192,7 @@ input[type=submit]:active, #createNoteButton:active {
 }
 
 footer {
+  display: none;
   width: 464px;
   margin: 0 auto;
   margin-bottom: 1em;

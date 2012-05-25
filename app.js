@@ -21,7 +21,8 @@ $('document').ready(function () {
     , newNoteForm = noteBox.find('#newNoteForm')
     , newNoteInput = newNoteForm.find('#newNoteInput')
     , createNoteButton = newNoteForm.find('#createNoteButton')
-    , logoutButton = noteBox.find('#logoutButton')
+    , logoutButton = $('#logoutButton')
+    , footer = $('footer')
     ;
 
   var myMember = null;
@@ -33,6 +34,7 @@ $('document').ready(function () {
 
     authenticationForm.toggle();
     noteBox.toggle();
+    footer.toggle();
   }
 
   // Show all stored notes
@@ -42,7 +44,7 @@ $('document').ready(function () {
     noteList.html('');
 
     $(notes).each(function (i, note) {
-      var html = '<li>' + note + '<a href="#" id="note-' + i + '">Delete note</a></li>';
+      var html = '<li>' + note + '<a href="#" title="Delete this note" class="delete" id="note-' + i + '"></a></li>';
       noteList.append(html);
 
       // Delete note listener
