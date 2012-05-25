@@ -42,7 +42,29 @@ $('document').ready(function () {
     noteList.html('');
 
     $(notes).each(function (i, note) {
-      noteList.append('<li>' + note + '</li>');
+      var html = '<li>' + note + '<a href="#" id="note-' + i + '">Delete note</a></li>';
+      noteList.append(html);
+
+      // Delete note listener
+      $('#note-' + i).click(function (e) {
+        e.preventDefault();
+        notes.splice(i, 1);
+        updateNotes(notes);
+      });
+    });
+  }
+
+  // Update the profile with the new note list
+  function updateNotes (newNotes) {
+    var profile = myMember.profile();
+    profile.notes = newNotes;
+
+    myMember.update({
+      profile: profile
+    }, function (err, updatedMember) {
+      if (err) return console.error(err);
+      console.log("Note deleted!");
+      showNotes();
     });
   }
 
@@ -86,20 +108,17 @@ $('document').ready(function () {
   createNoteButton.click(function (e) {
     e.preventDefault();
 
-    var profile = myMember.profile();
+    var newNote = newNoteInput.val();
+    if (!newNote.length) {
+      alert('Please enter a note');
+      return;
+    }
 
-    profile.notes = profile.notes || [];
+    var notes = myMember.profile().notes || [];
+    notes.push(newNoteInput.val());
+    newNoteInput.val('').focus();
 
-    profile.notes.push(newNoteInput.val());
-
-    myMember.update({
-      profile: profile
-    }, function (err, updatedMember) {
-      if (err) return console.error(err);
-      console.log("Note saved!");
-      newNoteInput.val('').focus();
-      showNotes();
-    });
+    updateNotes(notes);
   });
 
   // Logout button listener
