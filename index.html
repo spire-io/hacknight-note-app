@@ -3,59 +3,66 @@
 
 <head>
   <title>Demo of Serverless App</title>
+    <link rel="stylesheet" type="text/css" href="reset.css">
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+    <link href='http://fonts.googleapis.com/css?family=Oleo+Script' rel='stylesheet' type='text/css'>
     <script src="http://code.jquery.com/jquery.min.js"></script>
-
     <script src="spire.io.bundle.js"></script>
     <script src="app.js"></script>
 </head>
 
 <body>
- <form action="#" id="authenticationForm" method="post">
+
+  <form action="#" id="authenticationForm" method="post">
+    <div class="welcome">Welcome To Your Notes Apps</div>
     <div class="input-wrapper">
       <label for="login">Login</label>
       <input type="text"
         id="login"
-        placeholder="" />
+        placeholder="Username" />
 
       <div class="clear"><!-- --></div>
     </div>
 
     <div class="input-wrapper">
       <label for="password">Password</label>
-      <input type="password" id="password" name="password" />
+      <input type="password" id="password" name="password" placeholder="Password"/>
 
       <div class="clear"><!-- --></div>
     </div>
 
     <input type="submit"
-      id="loginButton"
-      value="Login" />
-
-    <input type="submit"
       id="joinButton"
       value="Join" />
+
+    <input type="submit"
+      id="loginButton"
+      value="Login" />
 
     <div class="clear"><!-- --></div>
   </form>
 
   <div id="noteBox" style="display:none">
-    <h2>Your Notes: </h2>
-    <ul id="noteList"></ul>
-
     <div id="newNote">
       <form action="#" id="newNoteForm" method="post">
         <div class="input-wrapper">
           <label for="newNoteInput">New Note:</label>
           <input type="text"
             id="newNoteInput"
-            placeholder="" />
+            placeholder="Add your note..." />
 
-        <input type="submit"
-          id="createNoteButton"
-          value="Create" />
+          <input type="submit"
+            id="createNoteButton"
+            value="Create" />
+        </div>
 
         <div class="clear"><!-- --></div>
       </form>
+    </div>
+    
+    <div id="yourNotes">
+      <h2>Your Notes: <span>(Oldest to newest)</span></h2>
+      <ul id="noteList"></ul>
     </div>
 
     <a href="#" id="logoutButton">Logout</a>
